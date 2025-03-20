@@ -72,44 +72,93 @@ Assessed models based on multiple performance metrics:
 -AUC-ROC Score to measure model discriminatory power.
 -Cohen’s Kappa & Matthews Correlation Coefficient for classification strength.
 
-est Set Results for All Models
+SHAP (SHapley Additive Explanations) analysis was used to interpret model predictions and assess feature importance
 
-Model
+![image](https://github.com/user-attachments/assets/85814511-0953-4524-a055-2f6f5927a71a)
 
-Test Accuracy
 
-Test Precision
+### Test Set Results
 
-Test Recall
+| Model            |Test Accuracy |Test Precision | Test Recall |Test F1 Score |
+|------------------|--------------|---------------|-------------|--------------|
+| **Random Forest**| 86.7%        | 80.6%         | 85.0%       | 82.7%        |
+| **XGBoost**      | 86.4%        | 80.6%         | 84.0%       | 82.3%        |
+| **CatBoost**     | **87.6%**    | **82.2%**     | **85.5%**   | **83.8%**    |
 
-Test F1 Score
 
-Random Forest
+Confusion Matrix Heatmaps:
 
-86.7%
+![image](https://github.com/user-attachments/assets/51f30356-7b52-4ef1-b9be-b04471b1bb4f)
 
-80.6%
 
-85.0%
 
-82.7%
+![image](https://github.com/user-attachments/assets/a56b500c-33e9-41e1-b2d9-aaefc37ddcdb)
 
-XGBoost
 
-86.4%
 
-80.6%
+![image](https://github.com/user-attachments/assets/aacf13a1-7afe-456d-920f-d361151aa572)
 
-84.0%
 
-82.3%
 
-CatBoost
+AUROC Curve:
 
-87.6%
+![image](https://github.com/user-attachments/assets/7a523bf6-f691-4f54-bdb5-11623633fe62)
 
-82.2%
 
-85.5%
 
-83.8%
+Precision-Recall Curve:
+
+![image](https://github.com/user-attachments/assets/410bc50c-31fa-4309-b831-2acc364e7e9f)
+
+
+
+###Best Model:
+CatBoost Classifier
+
+##Key Findings
+
+Delay Drivers & Risk Factors:
+-Shipment Mode, Vendor, Processing Times, Country, and the time of year were the most influential predictors of delays.
+-Freight Cost (USD) and Weight (Kilograms) showed moderate impact, with higher-cost shipments being more prone to delays, possibly due to their complexity or urgency.
+
+Seasonal Impact on Delays:
+-Q4 (Oct-Dec) has the highest delay rate (12.8%), likely due to peak-season demand and supplier backlogs.
+-Q2 (Apr-Jun) follows with 12.4% delays, suggesting mid-year procurement challenges.
+-Seasonal forecasting could help predict high-delay periods and optimize shipment planning.
+
+Cost Implications of Delays:
+
+Delayed Shipments Incur Higher Costs:
+-On-Time Shipments: $8,826 average freight cost.
+-Delayed Shipments: $10,440 average freight cost (+18%).
+-Higher costs may stem from expedited shipping, penalties, or additional storage fees.
+
+Freight Cost Varies Based On Country:
+
+![newplot](https://github.com/user-attachments/assets/772c14c4-1340-4eed-9776-e82e50efe0f4)
+
+
+
+Shipment Mode Cost Implications:
+-Truck-based shipments are cheaper ($7,644) but have higher delays (16.1%).
+-Air and Ocean shipments reduce delays but increase costs.
+-Direct Drop fulfillment significantly reduces delays.
+
+**Cost Breakdown by Shipment Mode**
+|    | Shipment Mode   |   Freight Cost (USD) |   Unit Price |   Line Item Insurance (USD) |
+|---:|:----------------|---------------------:|-------------:|----------------------------:|
+|  0 | Air             |              8958.97 |     0.81666  |                     158.986 |
+|  1 | Air Charter     |             15773.3  |     0.1874   |                     543.557 |
+|  2 | Ocean           |             11086.6  |     0.15248  |                     567.809 |
+|  3 | Truck           |              7644.1  |     0.251201 |                     294.259 |
+
+Future Improvements
+-Real-Time Data Integration: Incorporate live tracking data for dynamic delay predictions.
+-Advanced Feature Engineering: Explore time-series modeling for delay forecasting.
+-Deep Learning Approaches: Investigate LSTM-based models for sequential shipment data analysis.
+
+## Contact
+
+Email: @ thecolbyrobinson@gmail.com
+
+LinkedIn: linkedin.com/in/colby-robinson-869148172
