@@ -6,6 +6,8 @@
 
 This repository contains a comprehensive machine learning pipeline and supply-chain analysis for predicting delays in supply chain shipments. The focus is on health commodities, specifically Antiretroviral (ARV) and HIV lab shipments. The project aims to improve the efficiency and reliability of supply chains by accurately predicting potential delays and understanding the associated pricing and supply chain expenses.
 
+___
+
 <div align="center">
   <h3>Project Pipeline</h1>
   <img src="https://github.com/user-attachments/assets/0c61128f-babc-43f7-9568-819b26cb66c9" alt="Supply Chain Shipment Delay Prediction" width="600"/>
