@@ -14,8 +14,10 @@ Key features of this project include:
 - **Supply Chain Analysis:** In-depth analysis of the supply chain to identify bottlenecks and inefficiencies.
 
 ### Project Pipeline
-![image](https://github.com/user-attachments/assets/0c61128f-babc-43f7-9568-819b26cb66c9)
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/0c61128f-babc-43f7-9568-819b26cb66c9" alt="Supply Chain Shipment Delay Prediction" width="600"/>
+</div>
 
 ## Table of Contents
 - [Dataset](#dataset)
