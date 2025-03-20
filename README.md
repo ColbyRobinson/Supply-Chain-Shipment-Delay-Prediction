@@ -15,11 +15,11 @@ Key Features:
 
 Dataset Source: USAID SCMS Delivery History Dataset
 
-## Methodology
+# Methodology
 
 This project leverages machine learning techniques to predict shipment delays within the supply chain. The methodology is structured into the following key phases:
 
-Data Exploration & Understanding
+## Data Exploration & Understanding
 
 -Conducted Exploratory Data Analysis (EDA) to understand dataset structure, distributions, and patterns.
 
@@ -34,7 +34,7 @@ Data Exploration & Understanding
 ![image](https://github.com/user-attachments/assets/77ea664a-2a84-4931-9ab7-d59250274514)
 
 
-### Data preprocessing
+## Data preprocessing
 
 Handling Missing Data:
 -Imputed missing numerical values
@@ -53,7 +53,7 @@ Feature Engineering:
 
 -Applied SMOTE (Synthetic Minority Over-sampling Technique) to balance the dataset and prevent model bias towards on-time shipments.
 
-### Model Training
+## Model Training
 -Split dataset into training (70%) and testing (30%) sets.
 
 Implemented three machine learning models:
@@ -66,18 +66,18 @@ Implemented three machine learning models:
 -Applied Hyperparameter Tuning using RandomizedSearchCV to optimize model performance.
 -Used Stratified K-Fold Cross-Validation to ensure unbiased evaluation and reduce variance.
 
-### Model Evaluation & Selection
+## Model Evaluation & Selection
 Assessed models based on multiple performance metrics:
 -Accuracy, Precision, Recall, F1-score for balanced evaluation.
 -AUC-ROC Score to measure model discriminatory power.
 -Cohen’s Kappa & Matthews Correlation Coefficient for classification strength.
 
-SHAP (SHapley Additive Explanations) analysis was used to interpret model predictions and assess feature importance
+SHAP (SHapley Additive Explanations) analysis was used to interpret model predictions and assess feature importance:
 
 ![image](https://github.com/user-attachments/assets/85814511-0953-4524-a055-2f6f5927a71a)
 
 
-### Test Set Results
+## Test Set Results
 
 | Model            |Test Accuracy |Test Precision | Test Recall |Test F1 Score |
 |------------------|--------------|---------------|-------------|--------------|
@@ -112,10 +112,10 @@ Precision-Recall Curve:
 
 
 
-###Best Model:
+### Best Model:
 CatBoost Classifier
 
-##Key Findings
+# Key Findings
 
 Delay Drivers & Risk Factors:
 -Shipment Mode, Vendor, Processing Times, Country, and the time of year were the most influential predictors of delays.
