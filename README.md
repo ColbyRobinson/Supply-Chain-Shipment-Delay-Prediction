@@ -42,8 +42,6 @@ Dataset Source: USAID SCMS Delivery History Dataset
 
 This project leverages machine learning techniques to predict shipment delays within the supply chain. The methodology is structured into the following key phases:
 
-## Methodology
-
 ### Data Exploration & Understanding
 - Conducted Exploratory Data Analysis (EDA) to understand dataset structure, distributions, and patterns.
 - Assessed missing values.
