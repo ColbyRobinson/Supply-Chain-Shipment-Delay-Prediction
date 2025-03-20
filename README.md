@@ -110,13 +110,9 @@ Confusion Matrix Heatmaps:
 ![image](https://github.com/user-attachments/assets/a56b500c-33e9-41e1-b2d9-aaefc37ddcdb)
 ![image](https://github.com/user-attachments/assets/aacf13a1-7afe-456d-920f-d361151aa572)
 
-AUROC Curve:
+AUROC Curve & Precision-Recall Curve:
 
 ![image](https://github.com/user-attachments/assets/7a523bf6-f691-4f54-bdb5-11623633fe62)
-
-Precision-Recall Curve:
-
-![image](https://github.com/user-attachments/assets/410bc50c-31fa-4309-b831-2acc364e7e9f)
 
 ### Best Model:
 CatBoost Classifier
