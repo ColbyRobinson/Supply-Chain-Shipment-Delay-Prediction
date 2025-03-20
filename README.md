@@ -13,9 +13,8 @@ Key features of this project include:
 - **Visualization:** Providing insightful visualizations to understand the factors contributing to delays and their impact on costs.
 - **Supply Chain Analysis:** In-depth analysis of the supply chain to identify bottlenecks and inefficiencies.
 
-### Project Pipeline
-
 <div align="center">
+  <h3>Project Pipeline</h1>
   <img src="https://github.com/user-attachments/assets/0c61128f-babc-43f7-9568-819b26cb66c9" alt="Supply Chain Shipment Delay Prediction" width="600"/>
 </div>
 
