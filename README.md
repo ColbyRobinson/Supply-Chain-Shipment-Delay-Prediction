@@ -144,9 +144,8 @@ Delayed Shipments Incur Higher Costs:
 ### Shipment Mode Cost Implications
 - Truck-based shipments are cheaper ($7,644) but have higher delays (16.1%).
 - Air and Ocean shipments reduce delays but increase costs.
-- Direct Drop fulfillment significantly reduces delays.
 
-**Cost Breakdown by Shipment Mode**
+**Avg. Cost Breakdown by Shipment Mode**
 |    | Shipment Mode   |   Freight Cost (USD) |   Unit Price |   Line Item Insurance (USD) |
 |---:|:----------------|---------------------:|-------------:|----------------------------:|
 |  0 | Air             |              8958.97 |     0.81666  |                     158.986 |
