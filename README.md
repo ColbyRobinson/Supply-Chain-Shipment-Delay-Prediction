@@ -3,7 +3,7 @@
 ## Dataset
 The SCMS Delivery History Dataset is a comprehensive record of health commodity shipments managed by the Supply Chain Management System (SCMS) under the U.S. President's Emergency Plan for AIDS Relief (PEPFAR). This dataset encompasses procurement and distribution details of Antiretroviral (ARV) drugs and HIV laboratory supplies to various supported countries.
 
-Key Features:
+### Key Features:
 
 -Shipment Mode: Method of transportation (e.g., Air, Sea, Land).
 
@@ -43,21 +43,21 @@ This project leverages machine learning techniques to predict shipment delays wi
 
 ## Data preprocessing
 
-Handling Missing Data:
+### Handling Missing Data:
 
 -Imputed missing numerical values
 
 -Filled missing categorical values using the most frequent category.
 
 
-Feature Encoding:
+### Feature Encoding:
 
 -Converted categorical variables (e.g., shipment mode, Country) using one-hot encoding to maintain model interpretability.
 
 -Frequency Encoding applied to [Vendor] due to high cardinality.
 
 
-Feature Engineering:
+### Feature Engineering:
 
 -Processing Time = PO Sent to Vendor Date - PQ First Sent to Client Date.
 
@@ -73,7 +73,7 @@ Feature Engineering:
 ## Model Training
 -Split dataset into training (70%) and testing (30%) sets.
 
-Implemented three machine learning models:
+### Implemented three machine learning models:
 
   -Random Forest Classifier
 
@@ -81,6 +81,7 @@ Implemented three machine learning models:
 
   -CatBoost Classifier
 
+### Hyperparameter Tuning
 
 -Applied Hyperparameter Tuning using RandomizedSearchCV to optimize model performance.
 
@@ -95,13 +96,13 @@ Assessed models based on multiple performance metrics:
 
 -Cohen’s Kappa & Matthews Correlation Coefficient for classification strength.
 
-SHAP (SHapley Additive Explanations) analysis was used to interpret model predictions and assess feature importance:
+### SHAP (SHapley Additive Explanations) analysis was used to interpret model predictions and assess feature importance:
 
 ![image](https://github.com/user-attachments/assets/85814511-0953-4524-a055-2f6f5927a71a)
 
 
 
-## Test Set Results
+### Test Set Results
 
 | Model            |Test Accuracy |Test Precision | Test Recall |Test F1 Score |
 |------------------|--------------|---------------|-------------|--------------|
@@ -141,13 +142,13 @@ CatBoost Classifier
 
 # Key Findings
 
-Delay Drivers & Risk Factors:
+## Delay Drivers & Risk Factors:
 
 -Shipment Mode, Vendor, Processing Times, Country, and the time of year were the most influential predictors of delays.
 
 -Freight Cost (USD) and Weight (Kilograms) showed moderate impact, with higher-cost shipments being more prone to delays, possibly due to their complexity or urgency.
 
-Seasonal Impact on Delays:
+## Seasonal Impact on Delays:
 
 -Q4 (Oct-Dec) has the highest delay rate (12.8%), likely due to peak-season demand and supplier backlogs.
 
@@ -155,7 +156,7 @@ Seasonal Impact on Delays:
 
 -Seasonal forecasting could help predict high-delay periods and optimize shipment planning.
 
-Cost Implications of Delays:
+## Cost Implications of Delays:
 
 Delayed Shipments Incur Higher Costs:
 
@@ -166,13 +167,13 @@ Delayed Shipments Incur Higher Costs:
 -Higher costs may stem from expedited shipping, penalties, or additional storage fees.
 
 
-Freight Cost Varies Based On Country:
+### Freight Cost Varies Based On Country:
 
 ![newplot](https://github.com/user-attachments/assets/772c14c4-1340-4eed-9776-e82e50efe0f4)
 
 
 
-Shipment Mode Cost Implications:
+### Shipment Mode Cost Implications:
 
 -Truck-based shipments are cheaper ($7,644) but have higher delays (16.1%).
 
@@ -188,7 +189,7 @@ Shipment Mode Cost Implications:
 |  2 | Ocean           |             11086.6  |     0.15248  |                     567.809 |
 |  3 | Truck           |              7644.1  |     0.251201 |                     294.259 |
 
-Future Improvements
+## Future Improvements
 -Real-Time Data Integration: Incorporate live tracking data for dynamic delay predictions.
 
 -Advanced Feature Engineering: Explore time-series modeling for delay forecasting.
