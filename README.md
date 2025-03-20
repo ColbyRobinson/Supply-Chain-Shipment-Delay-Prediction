@@ -6,14 +6,21 @@ The SCMS Delivery History Dataset is a comprehensive record of health commodity 
 Key Features:
 
 -Shipment Mode: Method of transportation (e.g., Air, Sea, Land).
+
 -Weight (Kilograms): Total weight of the shipment.
+
 -Freight Cost (USD): Transportation cost in U.S. dollars.
+
 -Scheduled and Actual Delivery Dates: Planned and actual dates of delivery.
+
 -Vendor and Country Information: Details about suppliers and recipient countries.
+
 -Product Category: Classification of commodities (e.g., ARVs, Lab Supplies).
+
 -Delayed Shipment: Indicator of whether the shipment was delayed (1) or on-time (0).
 
 Dataset Source: USAID SCMS Delivery History Dataset
+
 
 # Methodology
 
@@ -37,44 +44,61 @@ This project leverages machine learning techniques to predict shipment delays wi
 ## Data preprocessing
 
 Handling Missing Data:
+
 -Imputed missing numerical values
+
 -Filled missing categorical values using the most frequent category.
 
+
 Feature Encoding:
+
 -Converted categorical variables (e.g., shipment mode, Country) using one-hot encoding to maintain model interpretability.
+
 -Frequency Encoding applied to [Vendor] due to high cardinality.
 
+
 Feature Engineering:
+
 -Processing Time = PO Sent to Vendor Date - PQ First Sent to Client Date.
+
 -Freight Cost per KG
 
 ### Addressing Class Imbalance
+
 -The dataset was highly imbalanced, with delayed shipments being a minority class.
 
 -Applied SMOTE (Synthetic Minority Over-sampling Technique) to balance the dataset and prevent model bias towards on-time shipments.
+
 
 ## Model Training
 -Split dataset into training (70%) and testing (30%) sets.
 
 Implemented three machine learning models:
+
   -Random Forest Classifier
 
   -XGBoost Classifier
 
   -CatBoost Classifier
 
+
 -Applied Hyperparameter Tuning using RandomizedSearchCV to optimize model performance.
+
 -Used Stratified K-Fold Cross-Validation to ensure unbiased evaluation and reduce variance.
 
 ## Model Evaluation & Selection
 Assessed models based on multiple performance metrics:
+
 -Accuracy, Precision, Recall, F1-score for balanced evaluation.
+
 -AUC-ROC Score to measure model discriminatory power.
+
 -Cohen’s Kappa & Matthews Correlation Coefficient for classification strength.
 
 SHAP (SHapley Additive Explanations) analysis was used to interpret model predictions and assess feature importance:
 
 ![image](https://github.com/user-attachments/assets/85814511-0953-4524-a055-2f6f5927a71a)
+
 
 
 ## Test Set Results
@@ -118,20 +142,29 @@ CatBoost Classifier
 # Key Findings
 
 Delay Drivers & Risk Factors:
+
 -Shipment Mode, Vendor, Processing Times, Country, and the time of year were the most influential predictors of delays.
+
 -Freight Cost (USD) and Weight (Kilograms) showed moderate impact, with higher-cost shipments being more prone to delays, possibly due to their complexity or urgency.
 
 Seasonal Impact on Delays:
+
 -Q4 (Oct-Dec) has the highest delay rate (12.8%), likely due to peak-season demand and supplier backlogs.
+
 -Q2 (Apr-Jun) follows with 12.4% delays, suggesting mid-year procurement challenges.
+
 -Seasonal forecasting could help predict high-delay periods and optimize shipment planning.
 
 Cost Implications of Delays:
 
 Delayed Shipments Incur Higher Costs:
+
 -On-Time Shipments: $8,826 average freight cost.
+
 -Delayed Shipments: $10,440 average freight cost (+18%).
+
 -Higher costs may stem from expedited shipping, penalties, or additional storage fees.
+
 
 Freight Cost Varies Based On Country:
 
@@ -140,8 +173,11 @@ Freight Cost Varies Based On Country:
 
 
 Shipment Mode Cost Implications:
+
 -Truck-based shipments are cheaper ($7,644) but have higher delays (16.1%).
+
 -Air and Ocean shipments reduce delays but increase costs.
+
 -Direct Drop fulfillment significantly reduces delays.
 
 **Cost Breakdown by Shipment Mode**
@@ -154,7 +190,9 @@ Shipment Mode Cost Implications:
 
 Future Improvements
 -Real-Time Data Integration: Incorporate live tracking data for dynamic delay predictions.
+
 -Advanced Feature Engineering: Explore time-series modeling for delay forecasting.
+
 -Deep Learning Approaches: Investigate LSTM-based models for sequential shipment data analysis.
 
 ## Contact
