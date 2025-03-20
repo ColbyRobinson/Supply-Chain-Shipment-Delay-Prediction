@@ -11,7 +11,7 @@ This repository contains a comprehensive machine learning pipeline and supply-ch
   <img src="https://github.com/user-attachments/assets/0c61128f-babc-43f7-9568-819b26cb66c9" alt="Supply Chain Shipment Delay Prediction" width="600"/>
 </div>
 
----
+___
 
 Key features of this project include:
 - **Data Preprocessing:** Cleaning and preparing the data for analysis, including handling missing values and outliers.
@@ -19,11 +19,6 @@ Key features of this project include:
 - **Evaluation:** Assessing the performance of the models and optimizing them for better accuracy.
 - **Visualization:** Providing insightful visualizations to understand the factors contributing to delays and their impact on costs.
 - **Supply Chain Analysis:** In-depth analysis of the supply chain to identify bottlenecks and inefficiencies.
-
-<div align="center">
-  <h3>Project Pipeline</h1>
-  <img src="https://github.com/user-attachments/assets/0c61128f-babc-43f7-9568-819b26cb66c9" alt="Supply Chain Shipment Delay Prediction" width="600"/>
-</div>
 
 ## Table of Contents
 - [Dataset](#dataset)
