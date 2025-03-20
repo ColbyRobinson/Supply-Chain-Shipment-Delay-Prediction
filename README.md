@@ -38,11 +38,11 @@ The SCMS Delivery History Dataset is a comprehensive record of health commodity 
   
 Dataset Source: USAID SCMS Delivery History Dataset
 
-## Methodology
+# Methodology
 
 This project leverages machine learning techniques to predict shipment delays within the supply chain. The methodology is structured into the following key phases:
 
-### Data Exploration & Understanding
+## Data Exploration & Understanding
 - Conducted Exploratory Data Analysis (EDA) to understand dataset structure, distributions, and patterns.
 - Assessed missing values.
 - Performed correlation analysis to identify relationships between features and delays.
@@ -52,26 +52,26 @@ This project leverages machine learning techniques to predict shipment delays wi
 
 ![image](https://github.com/user-attachments/assets/77ea664a-2a84-4931-9ab7-d59250274514)
 
-### Data Preprocessing
+## Data Preprocessing
 
-#### Handling Missing Data
+### Handling Missing Data
 - Imputed missing numerical values.
 - Filled missing categorical values using the most frequent category.
 
-#### Feature Encoding
+### Feature Encoding
 - Converted categorical variables (e.g., shipment mode, Country) using one-hot encoding to maintain model interpretability.
 - Applied Frequency Encoding to Vendor due to high cardinality.
 
-#### Feature Engineering
+### Feature Engineering
 - Processing Time = PO Sent to Vendor Date - PQ First Sent to Client Date.
 - Freight Cost per KG.
+
+## Model Training
+- Split the dataset into training (70%) and testing (30%) sets.
 
 ### Addressing Class Imbalance
 - The dataset was highly imbalanced, with delayed shipments being a minority class.
 - Applied SMOTE (Synthetic Minority Over-sampling Technique) to balance the dataset and prevent model bias towards on-time shipments.
-
-Model Training
-- Split the dataset into training (70%) and testing (30%) sets.
 
 ### Implemented Machine Learning Models
 - Random Forest Classifier
@@ -118,7 +118,7 @@ Precision-Recall Curve:
 ### Best Model:
 CatBoost Classifier
 
-## Key Findings
+## Supply-Chain Analysis & Key Findings
 
 ### Delay Drivers & Risk Factors
 - Shipment Mode, Vendor, Processing Times, Country, and the time of year were the most influential predictors of delays.
